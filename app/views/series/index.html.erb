@@ -1,0 +1,16 @@
+<h1 class="my-5">Mostrando todas las Series</h1>
+
+<div class="my-5 row">
+  <% @series.each do |serie| %>
+    <div class="mb-5 col">
+      <div class="card">
+        <p>Nombre: <%= serie.name %></p>
+        <p>Sinopsis: <%= serie.synopsis %></p>
+        <p>Director: <%= serie.director %></p>
+      </div>
+    </div>
+  <% end %>
+</div>
+<div class="my-5">
+  <%= link_to "Crear Registro", series_new_path, class: "btn btn-primary" %>
+</div>

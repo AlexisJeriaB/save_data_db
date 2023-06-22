@@ -1,0 +1,16 @@
+<h1 class="my-5">Mostrando todos los Documentales</h1>
+
+<div class="my-5 row">
+  <% @documentales.each do |documental| %>
+    <div class="mb-5 col">
+      <div class="card">
+        <p>Nombre: <%= documental.name %></p>
+        <p>Sinopsis: <%= documental.synopsis %></p>
+        <p>Director: <%= documental.director %></p>
+      </div>
+    </div>
+  <% end %>
+</div>
+<div class="my-5">
+  <%= link_to "Crear Registro", documentary_films_new_path, class: "btn btn-primary" %>
+</div>

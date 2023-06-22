@@ -1,0 +1,16 @@
+<h1 class="my-5">Mostrando todas las Peliculas</h1>
+
+<div class="my-5 row">
+  <% @movies.each do |movie| %>
+    <div class="mb-5 col">
+      <div class="card">
+        <p>Nombre: <%= movie.name %></p>
+        <p>Sinopsis: <%= movie.synopsis %></p>
+        <p>Director: <%= movie.director %></p>
+      </div>
+    </div>
+  <% end %>
+</div>
+<div class="my-5">
+  <%= link_to "Crear Registro", movies_new_path, class: "btn btn-primary" %>
+</div>
